@@ -1,6 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "applicationState",
+    "name": "keyValueState",
     "pageId": "Home Page",
     "pluginId": "js-plugin",
     "pluginType": "JS",
@@ -8,13 +8,13 @@
     "archivedActions": [],
     "variables": [
       {
-        "name": "env",
-        "value": "'DEVELOPMENT'"
+        "name": "data",
+        "value": "[]"
       }
     ],
     "userPermissions": []
   },
-  "id": "Home Page_applicationState",
+  "id": "Home Page_keyValueState",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_64352a801e9ff4059b041bc3"
+  "gitSyncId": "643516be7c81ad76974651df_643552247c81ad7697465a3e"
 }

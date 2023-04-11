@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 820,
+          "bottomRow": 1160,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -30,7 +30,7 @@
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "borderColor": "#E0DEDE",
               "iconSVG": "/static/media/icon.5b428de12db9ad6a591955ead07f86e9.svg",
-              "onSubmit": "{{userSummary.run()}}",
+              "onSubmit": "{{userSummary.run(() => postUserSummaryAction.onSuccess(), () => {})}}",
               "topRow": 0,
               "type": "JSON_FORM_WIDGET",
               "animateLoading": true,
@@ -301,7 +301,7 @@
                 }
               ],
               "borderWidth": "1",
-              "sourceData": "",
+              "sourceData": "{}",
               "resetButtonLabel": "Reset",
               "key": "9t8u33gpip",
               "backgroundColor": "#fff",
@@ -457,13 +457,13 @@
             },
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-              "widgetName": "Tabs1",
+              "widgetName": "summaryTablesTabs",
               "borderColor": "#E0DEDE",
               "isCanvas": true,
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 41,
-              "bottomRow": 82,
+              "bottomRow": 83,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -488,7 +488,7 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
-                  "bottomRow": 370,
+                  "bottomRow": 380,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -570,7 +570,7 @@
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "Table1",
+                      "widgetName": "ongoingJourneysTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id"
@@ -586,7 +586,11 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 13.375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "id": {
@@ -608,14 +612,15 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Ongoing Journeys",
+                          "label": "Ongoing Journey ID",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "computedValue": "{{ongoingJourneysTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                           "sticky": "",
                           "validation": {}
                         }
                       },
+                      "onRowSelected": "{{userJourneys.run(() => keyValueState.setData(), () => {})}}",
                       "key": "51e2l8zcvs",
                       "canFreezeColumn": true,
                       "isDeprecated": false,
@@ -656,7 +661,7 @@
                   "tabId": "tab2",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
-                  "bottomRow": 370,
+                  "bottomRow": 380,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -735,18 +740,17 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681209114813,
+                      "columnUpdatedAt": 1681211516108,
                       "originalBottomRow": 96,
                       "primaryColumnId": "id",
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "Table1Copy",
+                      "widgetName": "ongoingTermDepositsTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id",
-                        "Deposit_Amount",
-                        "customColumn1"
+                        "Deposit_Amount"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -755,7 +759,7 @@
                         "task": 245,
                         "step": 70,
                         "status": 85,
-                        "id": 511
+                        "id": 619
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -782,10 +786,10 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Ongoing Term Deposits",
+                          "label": "Ongoing Term Deposit ID",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "computedValue": "{{ongoingTermDepositsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                           "sticky": "",
                           "validation": {}
                         },
@@ -811,37 +815,9 @@
                           "label": "Deposit Amount",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Deposit Amount\"]))}}",
+                          "computedValue": "{{ongoingTermDepositsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Deposit Amount\"]))}}",
                           "sticky": "",
                           "validation": {}
-                        },
-                        "customColumn1": {
-                          "allowCellWrapping": false,
-                          "index": 2,
-                          "width": 150,
-                          "originalId": "customColumn1",
-                          "id": "customColumn1",
-                          "alias": "Action",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Action",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "",
-                          "sticky": "",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF"
                         }
                       },
                       "key": "51e2l8zcvs",
@@ -879,6 +855,342 @@
                   "isLoading": false,
                   "responsiveBehavior": "fill",
                   "flexLayers": []
+                },
+                {
+                  "tabId": "tab62mnjilla9",
+                  "widgetName": "Canvas4",
+                  "displayName": "Canvas",
+                  "topRow": 1,
+                  "bottomRow": 380,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 410,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "borderColor": "#E0DEDE",
+                      "isVisibleDownload": true,
+                      "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+                      "topRow": 0,
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET_V2",
+                      "inlineEditingSaveOption": "ROW_LEVEL",
+                      "animateLoading": true,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.id.computedValue"
+                        }
+                      ],
+                      "needsHeightForContent": true,
+                      "leftColumn": 0,
+                      "delimiter": ",",
+                      "defaultSelectedRowIndex": 0,
+                      "showInlineEditingOptionDropdown": true,
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "isVisible": true,
+                      "enableClientSideSearch": true,
+                      "version": 1,
+                      "totalRecordsCount": 0,
+                      "isLoading": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "editActions": {
+                          "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                        }
+                      },
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "columnUpdatedAt": 1681211639766,
+                      "originalBottomRow": 96,
+                      "primaryColumnId": "id",
+                      "defaultSelectedRowIndices": [
+                        0
+                      ],
+                      "widgetName": "withdrawalRequestsTable",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "id"
+                      ],
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "bottomRow": 35,
+                      "columnWidthMap": {
+                        "task": 245,
+                        "step": 70,
+                        "status": 85,
+                        "id": 511
+                      },
+                      "parentRowSpace": 10,
+                      "hideCard": false,
+                      "parentColumnSpace": 13.375,
+                      "dynamicTriggerPathList": [],
+                      "borderWidth": "1",
+                      "primaryColumns": {
+                        "id": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "id",
+                          "id": "id",
+                          "alias": "id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Withdrawal ID",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{withdrawalRequestsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "sticky": "",
+                          "validation": {}
+                        }
+                      },
+                      "key": "51e2l8zcvs",
+                      "canFreezeColumn": true,
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "textSize": "0.875rem",
+                      "widgetId": "xyuoxoqj7b",
+                      "minWidth": 450,
+                      "tableData": "{{userSummary.data.withdrawalRequests}}",
+                      "label": "Data",
+                      "searchKey": "",
+                      "parentId": "9pv9idzoi3",
+                      "renderMode": "CANVAS",
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "responsiveBehavior": "fill",
+                      "originalTopRow": 60,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER"
+                    }
+                  ],
+                  "key": "oqhyqx19kx",
+                  "isDeprecated": false,
+                  "tabName": "Withdrawal Requests",
+                  "rightColumn": 856,
+                  "detachFromLayout": true,
+                  "widgetId": "9pv9idzoi3",
+                  "containerStyle": "none",
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "s03wx3hy7u",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "responsiveBehavior": "fill",
+                  "flexLayers": []
+                },
+                {
+                  "tabId": "tabvqyvxiw8c3",
+                  "widgetName": "Canvas5",
+                  "displayName": "Canvas",
+                  "topRow": 1,
+                  "bottomRow": 380,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 410,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "borderColor": "#E0DEDE",
+                      "isVisibleDownload": true,
+                      "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+                      "topRow": 0,
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET_V2",
+                      "inlineEditingSaveOption": "ROW_LEVEL",
+                      "animateLoading": true,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.id.computedValue"
+                        }
+                      ],
+                      "needsHeightForContent": true,
+                      "leftColumn": 0,
+                      "delimiter": ",",
+                      "defaultSelectedRowIndex": 0,
+                      "showInlineEditingOptionDropdown": true,
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "isVisible": true,
+                      "enableClientSideSearch": true,
+                      "version": 1,
+                      "totalRecordsCount": 0,
+                      "isLoading": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "editActions": {
+                          "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                        }
+                      },
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "columnUpdatedAt": 1681211639766,
+                      "originalBottomRow": 96,
+                      "primaryColumnId": "id",
+                      "defaultSelectedRowIndices": [
+                        0
+                      ],
+                      "widgetName": "withdrawalRequestsTableCopy",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "id"
+                      ],
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "bottomRow": 35,
+                      "columnWidthMap": {
+                        "task": 245,
+                        "step": 70,
+                        "status": 85,
+                        "id": 511
+                      },
+                      "parentRowSpace": 10,
+                      "hideCard": false,
+                      "parentColumnSpace": 13.375,
+                      "dynamicTriggerPathList": [],
+                      "borderWidth": "1",
+                      "primaryColumns": {
+                        "id": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "id",
+                          "id": "id",
+                          "alias": "id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Login ID",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{withdrawalRequestsTableCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "sticky": "",
+                          "validation": {}
+                        }
+                      },
+                      "key": "51e2l8zcvs",
+                      "canFreezeColumn": true,
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "textSize": "0.875rem",
+                      "widgetId": "45u3oh9pjh",
+                      "minWidth": 450,
+                      "tableData": "{{userSummary.data.loginDetails}}",
+                      "label": "Data",
+                      "searchKey": "",
+                      "parentId": "wb72yh2a5g",
+                      "renderMode": "CANVAS",
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "responsiveBehavior": "fill",
+                      "originalTopRow": 60,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER"
+                    }
+                  ],
+                  "key": "oqhyqx19kx",
+                  "isDeprecated": false,
+                  "tabName": "Login Details",
+                  "rightColumn": 856,
+                  "detachFromLayout": true,
+                  "widgetId": "wb72yh2a5g",
+                  "containerStyle": "none",
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "s03wx3hy7u",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "responsiveBehavior": "fill",
+                  "flexLayers": []
                 }
               ],
               "borderWidth": 1,
@@ -908,6 +1220,20 @@
                   "isVisible": true,
                   "index": 1,
                   "positioning": "vertical"
+                },
+                "tab62mnjilla9": {
+                  "id": "tab62mnjilla9",
+                  "index": 2,
+                  "label": "Withdrawal Requests",
+                  "widgetId": "9pv9idzoi3",
+                  "isVisible": true
+                },
+                "tabvqyvxiw8c3": {
+                  "id": "tabvqyvxiw8c3",
+                  "index": 3,
+                  "label": "Login Details",
+                  "widgetId": "wb72yh2a5g",
+                  "isVisible": true
                 }
               },
               "isVisible": true,
@@ -919,8 +1245,168 @@
               "originalTopRow": 41,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 82,
+              "originalBottomRow": 83,
               "minDynamicHeight": 15
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": false,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 88,
+              "isSortable": false,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "primaryColumns.key.computedValue"
+                },
+                {
+                  "key": "primaryColumns.value.computedValue"
+                }
+              ],
+              "needsHeightForContent": true,
+              "leftColumn": 13,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": false,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 1,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1681215998836,
+              "originalBottomRow": 116,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "widgetName": "keyValueTable",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "key",
+                "value"
+              ],
+              "dynamicPropertyPathList": [],
+              "compactMode": "DEFAULT",
+              "displayName": "Table",
+              "bottomRow": 116,
+              "columnWidthMap": {
+                "task": 245,
+                "step": 70,
+                "status": 85
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "parentColumnSpace": 13.375,
+              "dynamicTriggerPathList": [],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "key": {
+                  "allowCellWrapping": false,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "key",
+                  "id": "key",
+                  "alias": "key",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "key",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{keyValueTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"key\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "value": {
+                  "allowCellWrapping": false,
+                  "index": 1,
+                  "width": 150,
+                  "originalId": "value",
+                  "id": "value",
+                  "alias": "value",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "value",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{keyValueTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"value\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                }
+              },
+              "key": "2bf3a4zcl8",
+              "canFreezeColumn": true,
+              "isDeprecated": false,
+              "rightColumn": 55,
+              "textSize": "0.875rem",
+              "widgetId": "4eqvb9ptch",
+              "minWidth": 450,
+              "tableData": "[{\"key\": \"\", \"value\": \"\"}]",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": false,
+              "responsiveBehavior": "fill",
+              "originalTopRow": 88,
+              "isVisiblePagination": false,
+              "verticalAlignment": "CENTER"
             }
           ]
         },

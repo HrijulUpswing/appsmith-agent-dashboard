@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "postUserSummaryAction",
+    "pageId": "Home Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Home Page_postUserSummaryAction",
+  "deleted": false,
+  "gitSyncId": "643516be7c81ad76974651df_643552f0e0735231ba6738c6"
+}
