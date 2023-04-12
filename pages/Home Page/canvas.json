@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1250,
+          "bottomRow": 1260,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -200,8 +200,8 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Internal Customer ID",
-                      "placeholderText": "Ex: 123456123456123456",
-                      "regex": "^[0-9]+"
+                      "placeholderText": "Ex: ICI_123456123456123456",
+                      "regex": "^ICI_[0-9]{18}"
                     },
                     "date_of_birth": {
                       "children": {},
@@ -627,7 +627,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 41,
-              "bottomRow": 82,
+              "bottomRow": 83,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -652,7 +652,7 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
-                  "bottomRow": 370,
+                  "bottomRow": 380,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -808,7 +808,7 @@
                   "isDisabled": false,
                   "key": "gvaaij19ne",
                   "isDeprecated": false,
-                  "tabName": "Ongoing Journeys",
+                  "tabName": "Incomplete Journey",
                   "rightColumn": 321,
                   "detachFromLayout": true,
                   "widgetId": "b3otoxl0zg",
@@ -825,7 +825,7 @@
                   "tabId": "tab2",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
-                  "bottomRow": 370,
+                  "bottomRow": 380,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -1029,184 +1029,11 @@
                   "flexLayers": []
                 },
                 {
-                  "tabId": "tab62mnjilla9",
-                  "widgetName": "Canvas4",
-                  "displayName": "Canvas",
-                  "topRow": 1,
-                  "bottomRow": 370,
-                  "parentRowSpace": 1,
-                  "type": "CANVAS_WIDGET",
-                  "canExtend": false,
-                  "hideCard": true,
-                  "minHeight": 410,
-                  "parentColumnSpace": 1,
-                  "dynamicTriggerPathList": [],
-                  "leftColumn": 0,
-                  "dynamicBindingPathList": [],
-                  "children": [
-                    {
-                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-                      "borderColor": "#E0DEDE",
-                      "isVisibleDownload": true,
-                      "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 0,
-                      "isSortable": true,
-                      "type": "TABLE_WIDGET_V2",
-                      "inlineEditingSaveOption": "ROW_LEVEL",
-                      "animateLoading": true,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "boxShadow"
-                        },
-                        {
-                          "key": "tableData"
-                        },
-                        {
-                          "key": "primaryColumns.id.computedValue"
-                        }
-                      ],
-                      "needsHeightForContent": true,
-                      "leftColumn": 0,
-                      "delimiter": ",",
-                      "defaultSelectedRowIndex": 0,
-                      "showInlineEditingOptionDropdown": true,
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisibleFilters": true,
-                      "isVisible": true,
-                      "enableClientSideSearch": true,
-                      "version": 1,
-                      "totalRecordsCount": 0,
-                      "isLoading": false,
-                      "childStylesheet": {
-                        "button": {
-                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "boxShadow": "none"
-                        },
-                        "menuButton": {
-                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "boxShadow": "none"
-                        },
-                        "iconButton": {
-                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "boxShadow": "none"
-                        },
-                        "editActions": {
-                          "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                          "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                          "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
-                        }
-                      },
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681211639766,
-                      "originalBottomRow": 96,
-                      "primaryColumnId": "id",
-                      "defaultSelectedRowIndices": [
-                        0
-                      ],
-                      "widgetName": "withdrawalRequestsTable",
-                      "defaultPageSize": 0,
-                      "columnOrder": [
-                        "id"
-                      ],
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Table",
-                      "bottomRow": 35,
-                      "columnWidthMap": {
-                        "task": 245,
-                        "step": 70,
-                        "status": 85,
-                        "id": 511
-                      },
-                      "parentRowSpace": 10,
-                      "hideCard": false,
-                      "parentColumnSpace": 13.375,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onRowSelected"
-                        }
-                      ],
-                      "borderWidth": "1",
-                      "primaryColumns": {
-                        "id": {
-                          "allowCellWrapping": false,
-                          "index": 0,
-                          "width": 150,
-                          "originalId": "id",
-                          "id": "id",
-                          "alias": "id",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Withdrawal ID",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{withdrawalRequestsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-                          "sticky": "",
-                          "validation": {}
-                        }
-                      },
-                      "onRowSelected": "{{userWithdrawalsAction.onRowSelect()}}",
-                      "key": "51e2l8zcvs",
-                      "canFreezeColumn": true,
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "textSize": "0.875rem",
-                      "widgetId": "xyuoxoqj7b",
-                      "minWidth": 450,
-                      "tableData": "{{userSummary.data.withdrawalRequests.summary}}",
-                      "label": "Data",
-                      "searchKey": "",
-                      "parentId": "9pv9idzoi3",
-                      "renderMode": "CANVAS",
-                      "horizontalAlignment": "LEFT",
-                      "isVisibleSearch": true,
-                      "responsiveBehavior": "fill",
-                      "originalTopRow": 60,
-                      "isVisiblePagination": true,
-                      "verticalAlignment": "CENTER"
-                    }
-                  ],
-                  "key": "oqhyqx19kx",
-                  "isDeprecated": false,
-                  "tabName": "Withdrawal Requests",
-                  "rightColumn": 856,
-                  "detachFromLayout": true,
-                  "widgetId": "9pv9idzoi3",
-                  "containerStyle": "none",
-                  "minWidth": 450,
-                  "isVisible": true,
-                  "version": 1,
-                  "parentId": "s03wx3hy7u",
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
-                  "responsiveBehavior": "fill",
-                  "flexLayers": []
-                },
-                {
                   "tabId": "tabvqyvxiw8c3",
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 370,
+                  "bottomRow": 380,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1393,7 +1220,7 @@
                   ],
                   "key": "oqhyqx19kx",
                   "isDeprecated": false,
-                  "tabName": "Login Details",
+                  "tabName": "Login Activity",
                   "rightColumn": 856,
                   "detachFromLayout": true,
                   "widgetId": "wb72yh2a5g",
@@ -1421,7 +1248,7 @@
               "minWidth": 450,
               "tabsObj": {
                 "tab1": {
-                  "label": "Ongoing Journeys",
+                  "label": "Incomplete Journey",
                   "id": "tab1",
                   "widgetId": "b3otoxl0zg",
                   "isVisible": true,
@@ -1436,17 +1263,10 @@
                   "index": 1,
                   "positioning": "vertical"
                 },
-                "tab62mnjilla9": {
-                  "id": "tab62mnjilla9",
-                  "index": 2,
-                  "label": "Withdrawal Requests",
-                  "widgetId": "9pv9idzoi3",
-                  "isVisible": true
-                },
                 "tabvqyvxiw8c3": {
                   "id": "tabvqyvxiw8c3",
-                  "index": 3,
-                  "label": "Login Details",
+                  "index": 2,
+                  "label": "Login Activity",
                   "widgetId": "wb72yh2a5g",
                   "isVisible": true
                 }
@@ -1475,8 +1295,8 @@
                 "parent",
                 "group"
               ],
-              "topRow": 83,
-              "bottomRow": 125,
+              "topRow": 84,
+              "bottomRow": 126,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -1687,16 +1507,13 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "fontFamily": "Inter",
                       "parentColumnSpace": 13.375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
-                        },
-                        {
-                          "key": "fontFamily"
                         },
                         {
                           "key": "borderRadius"
@@ -1748,7 +1565,7 @@
               "key": "so30u3v9u2",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 62,
+              "rightColumn": 64,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "d1yvgjkq5q",
               "containerStyle": "card",
