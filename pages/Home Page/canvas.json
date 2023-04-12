@@ -225,7 +225,7 @@
                       "labelTextSize": "0.875rem",
                       "serverSideFiltering": false,
                       "options": "[\n  {\n    \"label\": \"Axis Bank\",\n    \"value\": \"AXISIN\"\n  },\n  {\n    \"label\": \"Shriram Finance Limited\",\n    \"value\": \"STFCIN\"\n  },\n  {\n    \"label\": \"Bajaj Finance Limited\",\n    \"value\": \"BJFLIN\"\n  },\n\t{\n    \"label\": \"Utkarsh Small Finance Bank\",\n    \"value\": \"UTKSIN\"\n  }\n]",
-                      "placeholderText": "Select a bank or NBFC"
+                      "placeholderText": "--select--"
                     },
                     "employee_id": {
                       "children": {},
@@ -249,7 +249,7 @@
                       "labelTextSize": "0.875rem",
                       "serverSideFiltering": false,
                       "options": "[\n  {\n    \"label\": \"Edhas\",\n    \"value\": \"EDHS\"\n  },\n  {\n    \"label\": \"ACME Corp\",\n    \"value\": \"ACME\"\n  }\n]",
-                      "placeholderText": "Select a partner"
+                      "placeholderText": "--select--"
                     }
                   },
                   "dataType": "object",
