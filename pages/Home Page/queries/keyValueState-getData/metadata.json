@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "setData",
-    "fullyQualifiedName": "keyValueState.setData",
+    "name": "getData",
+    "fullyQualifiedName": "keyValueState.getData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -20,9 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {}
-      ],
+      "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
@@ -39,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home Page_keyValueState.setData",
+  "id": "Home Page_keyValueState.getData",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_64365f44422ef71d31786f7c"
+  "gitSyncId": "643516be7c81ad76974651df_64365ca899d4922aba72b81e"
 }

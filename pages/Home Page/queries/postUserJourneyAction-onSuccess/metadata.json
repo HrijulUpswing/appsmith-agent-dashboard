@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "setData",
-    "fullyQualifiedName": "keyValueState.setData",
+    "name": "onSuccess",
+    "fullyQualifiedName": "postUserJourneyAction.onSuccess",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,13 @@
       "userPermissions": []
     },
     "pageId": "Home Page",
-    "collectionId": "Home Page_keyValueState",
+    "collectionId": "Home Page_postUserJourneyAction",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {}
-      ],
+      "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
@@ -39,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home Page_keyValueState.setData",
+  "id": "Home Page_postUserJourneyAction.onSuccess",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_64365f44422ef71d31786f7c"
+  "gitSyncId": "643516be7c81ad76974651df_64364e6199d4922aba72b73d"
 }

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1160,
+          "bottomRow": 1240,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -463,7 +463,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 41,
-              "bottomRow": 83,
+              "bottomRow": 82,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -488,7 +488,7 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -620,7 +620,7 @@
                           "validation": {}
                         }
                       },
-                      "onRowSelected": "{{userJourneys.run(() => keyValueState.setData(), () => {})}}",
+                      "onRowSelected": "{{userJourneys.run(() => postUserJourneyAction.onSuccess(), () => {})}}",
                       "key": "51e2l8zcvs",
                       "canFreezeColumn": true,
                       "isDeprecated": false,
@@ -661,7 +661,7 @@
                   "tabId": "tab2",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -764,7 +764,11 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 13.375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "id": {
@@ -820,6 +824,7 @@
                           "validation": {}
                         }
                       },
+                      "onRowSelected": "{{userTermDeposits.run(() => postUserTermDepositsAction.onSuccess(), () => {})}}",
                       "key": "51e2l8zcvs",
                       "canFreezeColumn": true,
                       "isDeprecated": false,
@@ -861,7 +866,7 @@
                   "widgetName": "Canvas4",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -958,7 +963,11 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 13.375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "id": {
@@ -988,6 +997,7 @@
                           "validation": {}
                         }
                       },
+                      "onRowSelected": "{{userWithdrawals.run(() => postUserWithdrawalsAction.onSuccess(), () => {})}}",
                       "key": "51e2l8zcvs",
                       "canFreezeColumn": true,
                       "isDeprecated": false,
@@ -1029,7 +1039,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1109,7 +1119,7 @@
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "withdrawalRequestsTableCopy",
+                      "widgetName": "loginDetailsTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id"
@@ -1126,7 +1136,11 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 13.375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "borderWidth": "1",
                       "primaryColumns": {
                         "id": {
@@ -1151,11 +1165,12 @@
                           "label": "Login ID",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{withdrawalRequestsTableCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "computedValue": "{{loginDetailsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                           "sticky": "",
                           "validation": {}
                         }
                       },
+                      "onRowSelected": "{{userLoginDetails.run(() => postUserLoginDetailsAction.onSuccess(), () => {})}}",
                       "key": "51e2l8zcvs",
                       "canFreezeColumn": true,
                       "isDeprecated": false,
@@ -1245,7 +1260,7 @@
               "originalTopRow": 41,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 83,
+              "originalBottomRow": 82,
               "minDynamicHeight": 15
             },
             {
@@ -1253,7 +1268,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 88,
+              "topRow": 90,
               "isSortable": false,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -1273,10 +1288,13 @@
                 },
                 {
                   "key": "primaryColumns.value.computedValue"
+                },
+                {
+                  "key": "tableData"
                 }
               ],
               "needsHeightForContent": true,
-              "leftColumn": 13,
+              "leftColumn": 0,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1311,7 +1329,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1681215998836,
-              "originalBottomRow": 116,
+              "originalBottomRow": 125,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -1324,7 +1342,7 @@
               "dynamicPropertyPathList": [],
               "compactMode": "DEFAULT",
               "displayName": "Table",
-              "bottomRow": 116,
+              "bottomRow": 124,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -1392,11 +1410,11 @@
               "key": "2bf3a4zcl8",
               "canFreezeColumn": true,
               "isDeprecated": false,
-              "rightColumn": 55,
+              "rightColumn": 64,
               "textSize": "0.875rem",
               "widgetId": "4eqvb9ptch",
               "minWidth": 450,
-              "tableData": "[{\"key\": \"\", \"value\": \"\"}]",
+              "tableData": "{{keyValueState.getData()}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -1404,9 +1422,65 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 88,
+              "originalTopRow": 91,
               "isVisiblePagination": false,
               "verticalAlignment": "CENTER"
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph",
+                "label"
+              ],
+              "topRow": 85,
+              "bottomRow": 90,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 13.375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "text": "Selected Row Details",
+              "key": "bedzn7jbb3",
+              "isDeprecated": false,
+              "rightColumn": 32,
+              "textAlign": "LEFT",
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "bytahnxw1q",
+              "minWidth": 450,
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "fill",
+              "originalTopRow": 85,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 91,
+              "fontSize": "1.875rem",
+              "minDynamicHeight": 4
             }
           ]
         },

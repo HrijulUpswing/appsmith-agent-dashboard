@@ -1,6 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "keyValueState",
+    "name": "postUserTermDepositsAction",
     "pageId": "Home Page",
     "pluginId": "js-plugin",
     "pluginType": "JS",
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "Home Page_keyValueState",
+  "id": "Home Page_postUserTermDepositsAction",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_643552247c81ad7697465a3e"
+  "gitSyncId": "643516be7c81ad76974651df_64366236e0735231ba6747b2"
 }
