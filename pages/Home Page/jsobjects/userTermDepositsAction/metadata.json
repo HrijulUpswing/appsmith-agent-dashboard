@@ -1,6 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "postUserSummaryAction",
+    "name": "userTermDepositsAction",
     "pageId": "Home Page",
     "pluginId": "js-plugin",
     "pluginType": "JS",
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "Home Page_postUserSummaryAction",
+  "id": "Home Page_userTermDepositsAction",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_643552f0e0735231ba6738c6"
+  "gitSyncId": "643516be7c81ad76974651df_64366236e0735231ba6747b2"
 }

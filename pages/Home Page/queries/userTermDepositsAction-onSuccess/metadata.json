@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "onSuccess",
-    "fullyQualifiedName": "postUserTermDepositsAction.onSuccess",
+    "fullyQualifiedName": "userTermDepositsAction.onSuccess",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Home Page",
-    "collectionId": "Home Page_postUserTermDepositsAction",
+    "collectionId": "Home Page_userTermDepositsAction",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home Page_postUserTermDepositsAction.onSuccess",
+  "id": "Home Page_userTermDepositsAction.onSuccess",
   "deleted": false,
   "gitSyncId": "643516be7c81ad76974651df_643662507c81ad7697466830"
 }

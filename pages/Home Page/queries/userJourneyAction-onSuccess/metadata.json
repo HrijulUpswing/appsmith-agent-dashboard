@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "onSuccess",
-    "fullyQualifiedName": "postUserLoginDetailsAction.onSuccess",
+    "fullyQualifiedName": "userJourneyAction.onSuccess",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Home Page",
-    "collectionId": "Home Page_postUserLoginDetailsAction",
+    "collectionId": "Home Page_userJourneyAction",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -24,7 +24,6 @@
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -38,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home Page_postUserLoginDetailsAction.onSuccess",
+  "id": "Home Page_userJourneyAction.onSuccess",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_643662c1422ef71d31786fc0"
+  "gitSyncId": "643516be7c81ad76974651df_64364e6199d4922aba72b73d"
 }

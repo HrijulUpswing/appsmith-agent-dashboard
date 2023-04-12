@@ -1,6 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "postUserWithdrawalsAction",
+    "name": "userJourneyAction",
     "pageId": "Home Page",
     "pluginId": "js-plugin",
     "pluginType": "JS",
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "Home Page_postUserWithdrawalsAction",
+  "id": "Home Page_userJourneyAction",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_643662737c81ad7697466843"
+  "gitSyncId": "643516be7c81ad76974651df_64364e1fe0735231ba6746aa"
 }

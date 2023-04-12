@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "onSuccess",
-    "fullyQualifiedName": "postUserJourneyAction.onSuccess",
+    "name": "onRowSelect",
+    "fullyQualifiedName": "userWithdrawalsAction.onRowSelect",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Home Page",
-    "collectionId": "Home Page_postUserJourneyAction",
+    "collectionId": "Home Page_userWithdrawalsAction",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home Page_postUserJourneyAction.onSuccess",
+  "id": "Home Page_userWithdrawalsAction.onRowSelect",
   "deleted": false,
-  "gitSyncId": "643516be7c81ad76974651df_64364e6199d4922aba72b73d"
+  "gitSyncId": "643516be7c81ad76974651df_6436a5215a787709661d69e9"
 }
