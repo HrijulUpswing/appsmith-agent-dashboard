@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1260,
+          "bottomRow": 1250,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -627,7 +627,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 41,
-              "bottomRow": 83,
+              "bottomRow": 82,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -652,7 +652,7 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -825,7 +825,7 @@
                   "tabId": "tab2",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -923,7 +923,7 @@
                         "task": 245,
                         "step": 70,
                         "status": 85,
-                        "id": 619
+                        "id": 462
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -1033,7 +1033,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1280,7 +1280,7 @@
               "originalTopRow": 41,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 82,
+              "originalBottomRow": 83,
               "minDynamicHeight": 15
             },
             {
@@ -1295,8 +1295,8 @@
                 "parent",
                 "group"
               ],
-              "topRow": 84,
-              "bottomRow": 126,
+              "topRow": 83,
+              "bottomRow": 125,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -1576,10 +1576,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 83,
+              "originalTopRow": 84,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 125,
+              "originalBottomRow": 126,
               "minDynamicHeight": 10
             }
           ]
