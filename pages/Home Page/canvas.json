@@ -224,7 +224,7 @@
                       "label": "Financial Service Institute",
                       "labelTextSize": "0.875rem",
                       "serverSideFiltering": false,
-                      "options": "",
+                      "options": "[\n   {\n      \"label\":\"Axis Bank\",\n      \"value\":\"AXISIN\"\n   },\n   {\n      \"label\":\"Shriram Finance Limited\",\n      \"value\":\"STFCIN\"\n   },\n   {\n      \"label\":\"Bajaj Finance Limited\",\n      \"value\":\"BJFLIN\"\n   },\n   {\n      \"label\":\"Utkarsh Small Finance Bank\",\n      \"value\":\"UTKSIN\"\n   }\n]",
                       "placeholderText": "Select option"
                     },
                     "employee_id": {
