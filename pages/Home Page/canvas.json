@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1300,
+          "bottomRow": 1290,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -174,7 +174,7 @@
               },
               "disabledWhenInvalid": true,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 41,
+              "originalBottomRow": 44,
               "useSourceData": false,
               "schema": {
                 "__root_schema__": {
@@ -415,7 +415,7 @@
                       "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 5,
+                      "originalBottomRow": 6,
                       "fontSize": "1.875rem",
                       "minDynamicHeight": 4
                     },
@@ -485,7 +485,7 @@
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "columnUpdatedAt": 1681305534399,
-                      "originalBottomRow": 16,
+                      "originalBottomRow": 17,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -556,7 +556,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Ongoing Term Deposits",
+                          "label": "Booked Term Deposits",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ongoingTDs\"]))}}",
@@ -579,7 +579,7 @@
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": false,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 7,
+                      "originalTopRow": 8,
                       "isVisiblePagination": false,
                       "verticalAlignment": "CENTER"
                     }
@@ -627,7 +627,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 44,
-              "bottomRow": 86,
+              "bottomRow": 85,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -652,7 +652,7 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -859,7 +859,7 @@
                   "tabId": "tab2",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
@@ -1049,7 +1049,7 @@
                   "isDisabled": false,
                   "key": "gvaaij19ne",
                   "isDeprecated": false,
-                  "tabName": "Ongoing TDs",
+                  "tabName": "Booked TDs",
                   "rightColumn": 321,
                   "detachFromLayout": true,
                   "widgetId": "pkdzn0zrl3",
@@ -1067,7 +1067,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 380,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1290,7 +1290,7 @@
                   "positioning": "vertical"
                 },
                 "tab2": {
-                  "label": "Ongoing TDs",
+                  "label": "Booked TDs",
                   "id": "tab2",
                   "widgetId": "pkdzn0zrl3",
                   "isVisible": true,
@@ -1311,10 +1311,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 41,
+              "originalTopRow": 44,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 83,
+              "originalBottomRow": 86,
               "minDynamicHeight": 15
             },
             {
@@ -1329,8 +1329,8 @@
                 "parent",
                 "group"
               ],
-              "topRow": 87,
-              "bottomRow": 130,
+              "topRow": 86,
+              "bottomRow": 129,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -1427,7 +1427,7 @@
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "columnUpdatedAt": 1681215998836,
-                      "originalBottomRow": 40,
+                      "originalBottomRow": 41,
                       "primaryColumnId": "key",
                       "defaultSelectedRowIndices": [
                         0
@@ -1521,7 +1521,7 @@
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": false,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 6,
+                      "originalTopRow": 7,
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER"
                     },
@@ -1574,7 +1574,7 @@
                       "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 5,
+                      "originalBottomRow": 6,
                       "fontSize": "1.875rem",
                       "minDynamicHeight": 4
                     }
@@ -1610,10 +1610,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 84,
+              "originalTopRow": 87,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 126,
+              "originalBottomRow": 130,
               "minDynamicHeight": 10
             }
           ]
